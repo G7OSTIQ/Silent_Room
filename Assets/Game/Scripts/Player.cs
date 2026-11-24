@@ -6,16 +6,19 @@ namespace Game.Scripts
 {
     [RequireComponent(typeof(PlayerInput))]
     [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(PlayerInteraction))]
     public class Player : MonoBehaviour
     {
         
         // A reference to the components attached
         private PlayerMovement movement;
+        private PlayerInteraction interaction;
        
 
         private void Awake()
         {
             movement = GetComponent<PlayerMovement>();
+            interaction = GetComponent<PlayerInteraction>();
             
         }
         
@@ -39,6 +42,11 @@ namespace Game.Scripts
         {
             Vector2 input = value.Get<Vector2>();
             movement.Look(input);
+        }
+
+        private void OnInteract(InputValue value)
+        {
+            interaction.Interact();
         }
     }
 }
