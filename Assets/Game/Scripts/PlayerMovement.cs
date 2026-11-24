@@ -12,8 +12,7 @@ namespace Game.Scripts
         [SerializeField] private float speed = 5f;
         [SerializeField] private float lookSensitivity = 0.1f; // the speed of the mouse
         [SerializeField] private Transform playerCamera;
-        [SerializeField] private float CameraMaxView = 80f; //How far the player can view
-        [SerializeField] private float maxLookAngle = 80f; //
+        [SerializeField] private float maxLookAngle = 80f; //How far the player can view
 
         
         private CharacterController controller;

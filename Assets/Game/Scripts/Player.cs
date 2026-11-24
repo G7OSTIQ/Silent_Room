@@ -46,6 +46,7 @@ namespace Game.Scripts
 
         private void OnInteract(InputValue value)
         {
+            Debug.Log("E was pressed");
             interaction.Interact();
         }
     }
