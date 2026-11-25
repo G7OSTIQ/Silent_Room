@@ -22,13 +22,14 @@ namespace Game.Scripts
                 
                 TargetChanged?.Invoke(newTarget);
                 
-                
+                /* for testing
                 if(CurrentTarget != null)
                     Debug.Log("Looking at something interactable");
                 else
                 {
                     Debug.Log("Looking at nothing");
                 }
+                */
             }
             
         }
