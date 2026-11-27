@@ -8,7 +8,7 @@ namespace Game.Scripts
     public class Drawer :  MonoBehaviour, IInteractable
     {
         [SerializeField] public bool hasItem = true;
-        [SerializeField] private ItemType item = ItemType.Key;
+        [SerializeField] private Item item;
         [SerializeField] private float openDistance = 0.4f; // Animation how far it will slide
         [SerializeField] private float openTime = 0.5f; //How long it takes to slide;
         
@@ -96,7 +96,7 @@ namespace Game.Scripts
             
 
             //Give the item to the player
-            GameManager.Instance.Inventory.TryAdd(item, 1);
+            // GameManager.Instance.Inventory.TryAdd(item, 1);
             Debug.Log("Found a" + item); // tells what the item is
 
             hasItem = false; //when player already opened it, it would give another item
@@ -108,7 +108,7 @@ namespace Game.Scripts
         public void SetContents(ItemType itemType) //Put an item in the drawer
         {
             hasItem = true;
-            item = itemType;
+            // item = itemType;
         }
 
         public void SetEmpty()// make the drawer empty
